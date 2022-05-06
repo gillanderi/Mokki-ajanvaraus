@@ -4,12 +4,12 @@ import { Stack, Typography } from '@mui/material';
 
 export default function ControlledCheckbox(props) {
 
-  const [checked, setChecked] = React.useState(true);
+  
 
  
 
   const handleChange = (event) => {
-    setChecked(event.target.checked);
+    
     props.setLoppusiivousValittu (event.target.checked);
   };
 
@@ -24,7 +24,7 @@ export default function ControlledCheckbox(props) {
       variant='body2'
       >Sisällytä loppusiivous &euro; 100</Typography>
     <Checkbox
-      checked={checked}
+      checked={props.loppuSiivousValittu}
       onChange={handleChange}
       inputProps={{ 'aria-label': 'controlled' }}
     />

@@ -8,7 +8,7 @@ import SummaaTiedot from './components/SummaaTiedot';
 import {Container,Typography,} from '@material-ui/core';
 import { Stack } from '@mui/material';
 import Kuvat from './components/Kuvat';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
@@ -19,7 +19,12 @@ function App() {
 
   const [kohteenKuva, setkohteenKuva]=useState();
 
-  const laskeSumma = (valittuPaivahinta,paivienMaara,loppuSiivousValittu) =>{
+  useEffect (()=>{
+    laskeSumma();
+    
+  },[loppuSiivousValittu,paivienMaara,valittuPaivahinta])
+
+  const laskeSumma = () =>{
 
     {(loppuSiivousValittu===true)
     ?
@@ -32,9 +37,9 @@ function App() {
     
     
   }
+    
   console.log(kokonaisSumma)
-  
-  
+    
   return (
     <div >
       
@@ -63,9 +68,9 @@ function App() {
 
             <PaivaSlider setPaivienmaara={setPaivienmaara}/>
 
-            <Loppusiivous setLoppusiivousValittu={setLoppusiivousValittu}/>
+            <Loppusiivous setLoppusiivousValittu={setLoppusiivousValittu} loppuSiivousValittu={loppuSiivousValittu}/>
 
-            <SummaaTiedot paivienMaara={paivienMaara} />
+            <SummaaTiedot kokonaisSumma={kokonaisSumma} paivienMaara={paivienMaara} valittuPaivahinta={valittuPaivahinta} />
 
             </Stack>
         </Container>

@@ -14,7 +14,7 @@ export default function Selecti(props) {
     
     props.setValittupaivahinta (event.target.value);
     
-    props.laskeSumma(props.valittuPaivahinta,props.paivienMaara,props.loppuSiivousValittu);
+  
     
   };
 
