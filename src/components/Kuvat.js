@@ -33,7 +33,7 @@ function Kuvat (){
                               flexDirection : "column",
                               textAlign : "center",
                             }}>
-                            <img src={tuote.icon}
+                            <img src={tuote.icon} alt="kuva"
                             style={{
             
                               width : "auto",

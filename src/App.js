@@ -19,19 +19,19 @@ function App() {
 
   useEffect (()=>{
     laskeSumma();
-    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[loppuSiivousValittu,paivienMaara,valittuPaivahinta])
 
   const laskeSumma = () =>{
 
-    {(loppuSiivousValittu===true)
+    (loppuSiivousValittu===true)
     ?
       setkokonaisSumma (paivienMaara*valittuPaivahinta+100)
       
     :
       setkokonaisSumma (paivienMaara*valittuPaivahinta)
       
-    }
+    
     
     
   }
