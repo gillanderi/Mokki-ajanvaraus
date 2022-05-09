@@ -38,7 +38,7 @@ function App() {
     
   }
     
-  console.log(kokonaisSumma)
+  
     
   return (
     <div >
