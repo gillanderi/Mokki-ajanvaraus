@@ -1,6 +1,4 @@
 import './App.css';
-
-import Tuotteet from './components/Tuotteet';
 import Selecti from './components/Selecti';
 import PaivaSlider from './components/PaivaSlider';
 import Loppusiivous from './components/Loppusiivous';
@@ -17,7 +15,7 @@ function App() {
   const [valittuPaivahinta, setValittupaivahinta] = useState (0);
   const [kokonaisSumma, setkokonaisSumma] = useState (0);
 
-  const [kohteenKuva, setkohteenKuva]=useState();
+  
 
   useEffect (()=>{
     laskeSumma();

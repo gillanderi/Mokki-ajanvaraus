@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -55,7 +54,7 @@ export default function SummaaTiedot(props) {
             :
             null  
           } 
-          alt="valittu mökki"
+          alt=""
         />
         
         <CardContent>
